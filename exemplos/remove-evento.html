@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+    <style>
+
+    #my_div{
+        background-color: cornflowerblue;
+    }
+
+    </style> 
+
+</head>
+<body>
+   
+
+    <!-- Div que muda de cor quando o mouse passa por cima -->
+    <div id="my_div">
+        
+       Fala meu peixe
+
+    </div>
+
+
+    <!-- Botão que remove o evento de mudar cor da div -->
+    <button onclick="removeEvent()">Remover</button>
+
+</body>
+
+
+<script>
+
+    //Obter o elemento div
+    const my_div = document.getElementById("my_div")
+
+
+    //Adicionar um eventlistener que associa um evento ao elemento div. Evento de passar o mouse por cima e chamar a função de mudar cor
+    my_div.addEventListener("mousemove", changeColor)
+
+    
+    //Função de remover o evento 
+    function removeEvent(){
+
+        my_div.removeEventListener("mousemove", changeColor)
+
+    }
+
+
+    //Função de mudar a cor da div 
+    function changeColor(){
+
+        my_div.style.background = "coral"
+        my_div.style.fontSize = "34px"
+
+    }
+
+</script>
+
+
+</html>

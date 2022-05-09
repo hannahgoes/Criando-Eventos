@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Formulário</title>
+</head>
+<body>
+    
+
+    <div>
+
+        <p>Formulário de cadastro</p>
+
+        <form action="" id="meu_form">
+
+            <input type="text" id="email" placeholder="E-mail">
+
+            <input type="password" name="" id="senha" placeholder="Senha">
+
+            <input type="password" name="" id="confirmar" placeholder="Confirmar senha">
+
+            <input type="submit" value="Confirmar Cadastro">
+
+
+        </form>
+
+        
+
+    </div>
+
+
+<script>
+
+
+    var meu_form = document.getElementById("meu_form").addEventListener("submit", submeterForm)
+
+    function submeterForm(){
+        var email = document.getElementById("email").value
+
+        var senha = document.getElementById("senha").value
+
+        var confirma = document.getElementById("confirmar").value
+
+        if(email == "" || senha == "" || confirma== ""){
+            alert("Todos os campos são obrigatórios")
+        }else{
+
+            if(senha != confirma){
+            alert("Senhas não conferem")
+        }else{
+            alert(email + " Cadastrado com sucesso")
+        }
+
+        }
+
+       
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>
